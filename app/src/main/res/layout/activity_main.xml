@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="user"
+            type="expar.com.databinding.User" />
+        <variable
+            name="handler"
+            type="expar.com.databinding.MainActivity.MyHandlers "/>
+    </data>
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        tools:context=".MainActivity"
+        tools:showIn="@layout/activity_main">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:text="@{user.userEmail}"
+            android:layout_height="wrap_content" />
+        <TextView
+
+            android:layout_width="match_parent"
+            android:text="@{user.userName}"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{handler::onClickButton}"/>
+    </LinearLayout>
+
+</layout>
